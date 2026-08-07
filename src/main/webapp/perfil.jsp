@@ -14,8 +14,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FutbolLiveCo - Mi Perfil</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/base.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/navbar.css">
     <style>
         .perfil-container { max-width: 600px; margin: 40px auto; padding: 0 20px 40px; }
         .perfil-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; }
