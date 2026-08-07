@@ -1,0 +1,245 @@
+/* NAVBAR — FutbolLiveCo Redesign */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 36px;
+    height: 66px;
+    background: rgba(13,13,20,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.brand-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.brand-co { color: var(--accent); }
+
+/* Links de navegación */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-link {
+    padding: 8px 18px;
+    border-radius: var(--r-md);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background: rgba(255,255,255,0.05);
+}
+
+.nav-link.active {
+    color: var(--accent);
+    background: var(--accent-dim);
+    font-weight: 600;
+}
+
+/* Zona de usuario */
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.nav-user-btn {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: var(--r-md);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-strong);
+    transition: all 0.2s;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.nav-user-btn:hover {
+    border-color: var(--border-accent);
+    color: var(--text-primary);
+}
+
+.nav-logout-btn {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: var(--r-md);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.nav-logout-btn:hover {
+    border-color: var(--border-accent);
+    color: var(--accent);
+}
+
+.nav-auth-btn {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: var(--r-md);
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+.nav-auth-btn.secondary {
+    color: var(--text-secondary);
+    border: 1px solid var(--border-strong);
+    background: transparent;
+}
+
+.nav-auth-btn.secondary:hover {
+    color: var(--text-primary);
+    border-color: var(--border-accent);
+    background: var(--accent-dim);
+}
+
+.nav-auth-btn.primary {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.nav-auth-btn.primary:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 4px 16px var(--accent-glow);
+    color: #fff;
+}
+
+/* Toggle mobile */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--border-strong);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: var(--r-sm);
+    width: auto;
+    margin-top: 0;
+    transition: border-color 0.2s;
+}
+
+.navbar-toggle:hover { border-color: var(--accent); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 14px 20px;
+        gap: 0;
+    }
+
+    .navbar-toggle { display: block; }
+
+    .navbar-links,
+    .navbar-user {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0;
+        gap: 4px;
+        border-top: 1px solid var(--border);
+        margin-top: 12px;
+    }
+
+    .navbar-links.open,
+    .navbar-user.open { display: flex; }
+
+    .nav-link { width: 100%; padding: 10px 14px; }
+
+    .navbar-user {
+        border-top: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+/* ===========================
+   FOOTER (global, todas las páginas)
+=========================== */
+.site-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    padding: 28px 24px;
+}
+
+.site-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.site-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.site-footer-links a {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.site-footer-links a:hover {
+    color: var(--text-primary);
+}
+
+.site-footer-copy {
+    color: var(--text-muted);
+    font-size: 12.5px;
+}

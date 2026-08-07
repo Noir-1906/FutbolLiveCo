@@ -1,0 +1,222 @@
+/* ===========================
+   JUGADORES
+=========================== */
+.jugadores-header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 24px;
+}
+
+.jugadores-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #eeeeee;
+    margin-bottom: 6px;
+}
+
+.jugadores-sub {
+    color: #aaaaaa;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+}
+
+.busqueda-wrap {
+    display: flex;
+    gap: 10px;
+    max-width: 560px;
+    margin-bottom: 16px;
+}
+
+.ctrl-input {
+    flex: 1;
+    background-color: #16213e;
+    border: 1px solid #0f3460;
+    color: #eeeeee;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.ctrl-input:focus { border-color: #e94560; }
+.ctrl-input::placeholder { color: #666; }
+
+.btn-buscar-j {
+    width: auto;
+    padding: 10px 22px;
+    background-color: #e94560;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.btn-buscar-j:hover { background-color: #c73652; }
+
+/* Quick tags */
+.quick-jugadores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.quick-jug {
+    background-color: #16213e;
+    border: 1px solid #0f3460;
+    color: #aaaaaa;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.quick-jug:hover {
+    border-color: #e94560;
+    color: #e94560;
+}
+
+/* ===========================
+   GRID DE CARDS
+=========================== */
+.jugadores-tabla-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+}
+
+.jugadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 20px;
+}
+
+.jugador-card {
+    background-color: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    gap: 0;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.jugador-card:hover {
+    border-color: #e94560;
+    transform: translateY(-2px);
+}
+
+.jugador-card-foto {
+    width: 110px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.jugador-card-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.jugador-foto-big {
+    font-size: 3.5rem;
+    color: #0f3460;
+}
+
+.jugador-card-info {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.jugador-card-nombre {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #eeeeee;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.jugador-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.jugador-tag {
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.jugador-tag.pos  { background-color: rgba(233,69,96,0.15); color: #e94560; }
+.jugador-tag.nac  { background-color: #0f3460; color: #7ec8e3; }
+.jugador-tag.club { background-color: #0f3460; color: #aaaaaa; }
+
+.jugador-card-datos {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.jugador-dato {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.dato-label {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.dato-val {
+    font-size: 0.85rem;
+    color: #eeeeee;
+    font-weight: 600;
+}
+
+.jugador-card-desc {
+    font-size: 0.78rem;
+    color: #aaaaaa;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+    .jugadores-header { padding: 24px 16px 16px; }
+    .jugadores-tabla-wrap { padding: 0 12px 32px; }
+    .busqueda-wrap { flex-direction: column; }
+    .btn-buscar-j { width: 100%; }
+    .jugadores-grid { grid-template-columns: 1fr; }
+    .jugador-card-foto { width: 90px; }
+}

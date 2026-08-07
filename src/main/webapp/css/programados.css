@@ -1,0 +1,101 @@
+/* PARTIDOS PROGRAMADOS */
+.programados-header {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 36px 24px 18px;
+}
+
+.programados-header h1 {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filtros-programados {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.filtro-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filtro-group label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.filtro-select {
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    color: var(--text-primary);
+    padding: 10px 16px;
+    border-radius: var(--r-md);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    min-width: 165px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238888a8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+.filtro-select:focus,
+.filtro-select:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.btn-buscar {
+    width: auto;
+    padding: 10px 26px;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--r-md);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 0;
+    align-self: flex-end;
+}
+
+.btn-buscar:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+#matches-programados {
+    display: grid;
+    gap: 12px;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+}
+
+@media (max-width: 600px) {
+    .filtros-programados { flex-direction: column; }
+    .filtro-select { width: 100%; }
+    .btn-buscar { width: 100%; }
+    #matches-programados { padding: 0 14px 32px; }
+}

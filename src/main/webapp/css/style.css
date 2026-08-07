@@ -1,0 +1,104 @@
+/* STYLE.CSS — Variables globales (reutiliza base.css, solo complementos) */
+/* Este archivo es cargado por páginas que aún referencian style.css */
+/* Las variables CSS ya están definidas en base.css */
+
+main, .content {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 36px 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    background: rgba(13,13,20,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header .subtitle {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-weight: 300;
+}
+
+.header-links a {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--r-md);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.header-links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+#matches {
+    display: grid;
+    gap: 12px;
+    max-width: 880px;
+    margin: 12px auto;
+    padding: 0 24px 36px;
+}
+
+.team {
+    font-size: 1rem;
+    font-weight: 600;
+    flex: 1;
+    color: var(--text-primary);
+}
+
+.team.away { text-align: right; }
+
+.center-info { text-align: center; min-width: 150px; }
+
+#loading {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 80px;
+    font-size: 1rem;
+}
+
+.no-matches { text-align: center; color: var(--text-muted); padding: 48px; }
+.error-msg  { text-align: center; color: var(--accent); padding: 48px; font-size: 1rem; }
+
+.last-update {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    padding-bottom: 36px;
+    font-weight: 300;
+}
+
+#matches-programados {
+    display: grid;
+    gap: 12px;
+    max-width: 880px;
+    margin: 12px auto;
+    padding: 0 24px 36px;
+}
+
+@media (max-width: 600px) {
+    header { flex-direction: column; gap: 12px; padding: 18px 20px; text-align: center; }
+    .match-card { flex-direction: column; gap: 12px; text-align: center; }
+    .team.away { text-align: center; }
+    .center-info { min-width: unset; }
+}

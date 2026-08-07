@@ -1,0 +1,39 @@
+# ============================================================
+# EJEMPLO DE CONFIGURACIÓN — copia este archivo a config.properties
+# y rellena con tus credenciales. NUNCA subas config.properties al repo.
+#
+# EN PRODUCCIÓN (Railway): no uses este archivo. En su lugar, crea
+# estas mismas variables (en MAYÚSCULAS, puntos -> guion bajo) en
+# Railway > tu servicio de la app > pestaña "Variables". Ejemplo:
+#   db.url       -> DB_URL
+#   db.user      -> DB_USER
+#   db.password  -> DB_PASSWORD
+#   api.live.key -> API_LIVE_KEY
+# ============================================================
+
+# Base de datos MySQL
+db.url=jdbc:mysql://localhost:3306/futbolliveco?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+db.user=tu_usuario_db
+db.password=tu_contrasena_db
+
+# API Football (partidos en vivo)  -> https://www.api-football.com/
+api.live.key=TU_CLAVE_API_FOOTBALL
+
+# NewsAPI (noticias)               -> https://newsapi.org/
+api.noticias.key=TU_CLAVE_NEWSAPI
+
+# Football-data.org (programados)  -> https://www.football-data.org/
+api.programados.key=TU_CLAVE_FOOTBALL_DATA
+
+# YouTube Data API v3 (highlights) -> https://console.cloud.google.com/
+api.highlights.key=TU_CLAVE_YOUTUBE
+
+
+# Gmail SMTP (recuperación de contraseña)
+# Usar "Contraseña de aplicación" de Google (NO tu contraseña normal):
+# https://myaccount.google.com/apppasswords
+mail.smtp.host=smtp.gmail.com
+mail.smtp.port=587
+mail.smtp.user=TU_CORREO@gmail.com
+mail.smtp.password=TU_APP_PASSWORD_16_CHARS
+mail.from=TU_CORREO@gmail.com

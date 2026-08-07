@@ -1,0 +1,3 @@
+com\mycompany\futbolliveco\util\CsrfUtilTest.class
+com\mycompany\futbolliveco\service\UsuarioServiceTest.class
+com\mycompany\futbolliveco\util\LoginRateLimiterTest.class

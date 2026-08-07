@@ -1,0 +1,210 @@
+/* ===========================
+   CLASIFICACIONES
+=========================== */
+.clasificaciones-header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.clasificaciones-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #eeeeee;
+}
+
+.liga-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 24px;
+}
+
+.liga-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background-color: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 20px;
+    color: #aaaaaa;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: auto;
+    margin: 0;
+}
+
+.liga-tab:hover {
+    border-color: #e94560;
+    color: #eeeeee;
+}
+
+.liga-tab.active {
+    background-color: #e94560;
+    border-color: #e94560;
+    color: #ffffff;
+}
+
+.liga-tab img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Tabla */
+.tabla-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+}
+
+.tabla-clasificacion {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #16213e;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #0f3460;
+}
+
+.tabla-clasificacion thead tr {
+    background-color: #0f3460;
+}
+
+.tabla-clasificacion th {
+    padding: 12px 14px;
+    font-size: 0.78rem;
+    color: #aaaaaa;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.tabla-clasificacion th:first-child,
+.tabla-clasificacion td:first-child {
+    text-align: left;
+    padding-left: 16px;
+    width: 40px;
+}
+
+.tabla-clasificacion th.col-equipo,
+.tabla-clasificacion td.col-equipo {
+    text-align: left;
+}
+
+.tabla-clasificacion tbody tr {
+    border-bottom: 1px solid #0f3460;
+    transition: background-color 0.15s;
+}
+
+.tabla-clasificacion tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabla-clasificacion tbody tr:hover {
+    background-color: rgba(255,255,255,0.04);
+}
+
+.tabla-clasificacion td {
+    padding: 11px 14px;
+    font-size: 0.88rem;
+    color: #dddddd;
+    text-align: center;
+}
+
+.equipo-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.equipo-escudo {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.equipo-nombre {
+    font-weight: 600;
+    color: #eeeeee;
+    font-size: 0.88rem;
+}
+
+.posicion-num {
+    font-weight: bold;
+    color: #aaaaaa;
+}
+
+/* Colores de zona */
+.zona-champions { border-left: 3px solid #4fc3f7; }
+.zona-europa    { border-left: 3px solid #81c784; }
+.zona-relegacion{ border-left: 3px solid #e94560; }
+
+.td-pts {
+    font-weight: bold;
+    color: #eeeeee;
+    font-size: 0.95rem;
+}
+
+.td-forma span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 1px;
+}
+
+.forma-W { background-color: #2e7d32; color: #fff; }
+.forma-D { background-color: #555; color: #fff; }
+.forma-L { background-color: #b71c1c; color: #fff; }
+
+/* Leyenda */
+.tabla-leyenda {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    font-size: 0.78rem;
+    color: #aaaaaa;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.leyenda-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 700px) {
+    .col-hide { display: none; }
+
+    .tabla-wrap { padding: 0 12px 32px; }
+    .liga-tabs  { padding: 0 12px 16px; }
+
+    .clasificaciones-header { padding: 24px 16px 12px; }
+}

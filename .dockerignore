@@ -1,0 +1,8 @@
+target/
+.git/
+.idea/
+*.iml
+nb-configuration.xml
+nbactions.xml
+src/main/resources/config.properties
+*.log
